@@ -2,9 +2,180 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Responsive Form Day 3</title>
+
+    <style media="screen">
+
+      h3{
+        color: white;
+        margin: 10px 0px 5px 0px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        font-variant: small-caps;
+      }
+
+      body{
+        background-color: #62A2DB;
+      }
+
+      form{
+        text-align: left;
+      }
+
+      input{
+        border: white solid 1px;
+        background-color: #62A2DB;
+        width: 100%;
+        height: 25px;
+        font-family: sans-serif;
+      }
+
+      input:focus{
+        border: black solid 1px;
+        font-family: sans-serif;
+      }
+
+      select{
+        border: white solid 1px;
+        background-color: #62A2DB;
+        width: 100%;
+        height: 25px;
+        font-family: sans-serif;
+        font-size: 15px;
+        color: white;
+      }
+
+      select:focus{
+        border: black solid 1px;
+      }
+
+      textarea{
+        border: white solid 1px;
+        background-color: #62A2DB;
+        width: 100%;
+        font-family: sans-serif;
+      }
+
+      select:focus{
+        border: black solid 1px;
+      }
+
+      .content{
+        /*background-color: #cccccc;*/
+        width: 90%;
+        margin: auto;
+      }
+
+      .leftcolumn{
+        float: left;
+        width: 30%;
+        min-width: 200px;
+        padding: 20px;
+      }
+
+      .centercolumn{
+        float: left;
+        width: 30%;
+        min-width: 200px;
+        padding: 20px;
+      }
+
+      .rightcolumn{
+        float: left;
+        width: 30%;
+        min-width: 200px;
+        padding: 20px;
+      }
+
+      .clearfix{
+        clear: both;
+        height: 0;
+        width: 100%;
+        margin: 25px 0;
+      }
+
+      #submitbutton{
+        width: 20%;
+        display: block;
+        margin: 10px auto;
+      }
+
+      .clearfix::before, .clearfix::after {
+        content: " ";
+        display: table;
+      }
+
+      .clearfix::after {
+        clear: both;
+      }
+
+    </style>
   </head>
   <body>
+    <div class="content">
 
+    <form class="form1" action="http://requestb.in/15xselx1" method="post">
+
+      <div class="leftcolumn column">
+
+        <h3>First Name</h3>
+        <input type="text" name="firstname" value="" placeholder="John">
+        <h3>Last Name</h3>
+        <input type="text" name="lastname" value="" placeholder="Doe">
+        <h3>Email Address</h3>
+        <input type="email" name="email" value="" placeholder="john@doe.com">
+        <h3>Country</h3>
+        <select class="countryselect" name="country">
+          <option value="Choose a country" selected>Choose a Country</option>
+          <option value="The United States">The United States</option>
+          <option value="Canada">Canada</option>
+          <option value="Other">Other</option>
+        </select>
+        <h3>Bio</h3>
+        <textarea name="biography" rows="15" cols="40"></textarea>
+      </div>
+
+      <div class="centercolumn column">
+        <h3>Phone Number</h3>
+        <input type="tel" name="telephone" value="" placeholder="777-777-7777">
+        <h3>Affiliations</h3>
+        <textarea name="affiliations" rows="15" cols="40"></textarea>
+        <h3>Occupation</h3>
+        <select class="occupationselect" name="occupation">
+          <option value="Choose an Occupation" selected>Choose an Occupation</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Student">Student</option>
+          <option value="Other">Other</option>
+        </select>
+        <h3>Cat's Name</h3>
+        <input type="text" name="catname" value="" placeholder="Mr. Mittens">
+        <h3>Favorite Gadget</h3>
+        <input type="text" name="gadget" value="" placeholder="Whisk">
+      </div>
+
+      <div class="rightcolumn column">
+        <h3>Type of Talent</h3>
+        <select class="talentselect" name="talent">
+          <option value="selected" selected>Choose a talent</option>
+          <option value="Juggling">Juggling</option>
+          <option value="Swimming">Swimming</option>
+        </select>
+        <h3>Favorite Drink</h3>
+        <input type="text" name="drink" value="" placeholder="Whiskey">
+        <h3>Special Power</h3>
+        <input type="text" name="power" value="" placeholder="Flying">
+        <h3>Weapon of Choice</h3>
+        <input type="text" name="weapon" value="" placeholder="Mace">
+        <h3>Comments</h3>
+        <textarea name="Comments" rows="15" cols="40"></textarea>
+      </div>
+
+      <div class="clearfix">
+      </div>
+
+      <input id="submitbutton" type="submit" name="submit" value="Submit!">
+    </form>
+
+    </div>
   </body>
 </html>
